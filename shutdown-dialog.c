@@ -82,6 +82,9 @@ gboolean on_key(GtkWidget *widget, GdkEventKey *event, gpointer data) {
         case HIBERNATE_HOTKEY:
             cmd = HIBERNATE_CMD;
             break;
+        case LOGOUT_HOTKEY:
+            cmd = LOGOUT_CMD;
+            break;
     }
 
     if (cmd) {
@@ -107,7 +110,7 @@ void on_click(GtkWidget *widget, gpointer data) {
     } else if (!strcmp(name, "hibernate")) {
         cmd = HIBERNATE_CMD;
     } else if (!strcmp(name, "logout")) {
-        cmd = get_logout_command();
+        cmd = LOGOUT_CMD;
     }
 
     if (cmd) system(cmd);
