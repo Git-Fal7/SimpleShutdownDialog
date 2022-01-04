@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall -Wextra `pkg-config --cflags gtk+-3.0`
 LDFLAGS=`pkg-config --libs gtk+-3.0`
-OBJ=shutdown-dialog.o resources.o logout.o
+OBJ=shutdown-dialog.o resources.o
 BIN=shutdown-dialog
 
 all: shutdown-dialog.o
