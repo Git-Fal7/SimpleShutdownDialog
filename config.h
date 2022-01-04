@@ -4,7 +4,7 @@
 #define REBOOT_CMD "reboot"
 #define SUSPEND_CMD "systemctl suspend"
 #define HIBERNATE_CMD "systemctl hibernate"
-#define LOGOUT_CMD "loginctl terminate-session"
+#define LOGOUT_CMD "loginctl terminate-session $XDG_SESSION_ID"
 
 // for a list of keys see gdk/gdkkeysyms.h
 #define POWEROFF_HOTKEY GDK_KEY_p
