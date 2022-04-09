@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Session
+Comment=Power off, logout restart
+Icon=system-poweroff
+TryExec=shutdown-dialog
+Exec=shutdown-dialog
+Categories=System
