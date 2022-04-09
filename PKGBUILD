@@ -11,17 +11,17 @@ source=("$pkgname::git+$url.git")
 sha256sums=("SKIP")
 
 pkgver() {
-    cd "$_pkgbase"
+    cd "$pkgname"
     printf "%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-    cd "$_pkgbase"
+    cd "$pkgname"
     make
 }
 
 package() {
-    cd "$_pkgbase"
+    cd "$pkgname"
     install -Dm755 shutdown-dialog "$pkgdir"/usr/bin/shutdown-dialog
     install -Dm755 shutdown-dialog.desktop "$pkgdir"/usr/share/applications/shutdown-dialog.desktop
 }
